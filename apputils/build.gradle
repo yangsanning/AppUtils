@@ -1,17 +1,17 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.yangsanning'
 
 android {
     compileSdkVersion rootProject.ext.version.compileSdkVersion
 
     defaultConfig {
-        applicationId "ysn.com.demo.apputils"
-
         minSdkVersion rootProject.ext.version.minSdkVersion
         targetSdkVersion rootProject.ext.version.targetSdkVersion
         versionCode rootProject.ext.version.versionCode
         versionName rootProject.ext.version.versionName
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
     }
 
     buildTypes {
@@ -24,12 +24,4 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation rootProject.ext.supportLibs
-
-    implementation (project(':apputils'))
-
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }

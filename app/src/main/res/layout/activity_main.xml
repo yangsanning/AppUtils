@@ -1,13 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/main_activity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <Button
+            android:id="@+id/main_activity_start_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="通过包名启动App" />
+
+        <Button
+            android:id="@+id/main_activity_start_app_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="通过包名和类名启动App" />
+
+        <Button
+            android:id="@+id/main_activity_start_browser_by_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="打开浏览器搜索指定内容" />
+
+        <Button
+            android:id="@+id/main_activity_start_browser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="打开指定页面" />
+
+        <Button
+            android:id="@+id/main_activity_start_app_store"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="跳转到应用商店app详情界面" />
+
+        <Button
+            android:id="@+id/main_activity_start_app_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="打开app详情界面" />
+
+        <Button
+            android:id="@+id/main_activity_start_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="打开设置页面" />
+
+        <Button
+            android:id="@+id/main_activity_start_uninstall_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="打开app卸载界面" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

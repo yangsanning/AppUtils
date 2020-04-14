@@ -1,2 +1,3 @@
 rootProject.name='AppUtils'
 include ':app'
+include ':apputils'
