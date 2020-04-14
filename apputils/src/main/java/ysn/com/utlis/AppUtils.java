@@ -133,4 +133,18 @@ public class AppUtils {
         Intent intent = new Intent("android.intent.action.DELETE", Uri.parse("package:" + appPackage));
         context.startActivity(intent);
     }
+
+    /**
+     * 判断app是否已经安装
+     *
+     * @param appPackage app包名
+     */
+    public static boolean isInstall(Context context, String appPackage) {
+        try {
+            context.getPackageManager().getPackageInfo(appPackage, 0);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
 }

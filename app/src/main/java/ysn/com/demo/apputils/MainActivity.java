@@ -6,6 +6,7 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import ysn.com.utlis.AppStore;
 import ysn.com.utlis.AppUtils;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -37,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AppUtils.startBrowser(this, "https://www.baidu.com/");
                 break;
             case R.id.main_activity_start_app_store:
-                AppUtils.startAppStore(this, "com.tencent.mobileqq", "");
+                String appPackage = AppUtils.isInstall(this, AppStore.YING_YONG_BAO.appPackage) ? AppStore.YING_YONG_BAO.appPackage : "";
+                AppUtils.startAppStore(this, "com.tencent.mobileqq", appPackage);
                 break;
             case R.id.main_activity_start_app_details:
                 AppUtils.startAppDetails(this, "com.tencent.mobileqq");
