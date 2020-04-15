@@ -29,20 +29,6 @@
             android:text="通过包名和类名启动App" />
 
         <Button
-            android:id="@+id/main_activity_start_browser_by_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="打开浏览器搜索指定内容" />
-
-        <Button
-            android:id="@+id/main_activity_start_browser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="打开指定页面" />
-
-        <Button
             android:id="@+id/main_activity_start_app_store"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,12 +43,46 @@
             android:text="打开app详情界面" />
 
         <Button
+            android:id="@+id/main_activity_start_browser_by_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="打开浏览器搜索指定内容" />
+
+        <Button
+            android:id="@+id/main_activity_start_browser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="打开指定页面" />
+
+        <Button
             android:id="@+id/main_activity_start_setting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="打开设置页面" />
 
+        <Button
+            android:id="@+id/main_activity_start_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="打电话" />
+
+        <Button
+            android:id="@+id/main_activity_send_sms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="发短信" />
+
+        <Button
+            android:id="@+id/main_activity_send_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="发邮件" />
         <Button
             android:id="@+id/main_activity_start_uninstall_app"
             android:layout_width="match_parent"

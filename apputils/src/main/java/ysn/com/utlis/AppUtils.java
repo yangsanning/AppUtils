@@ -45,29 +45,6 @@ public class AppUtils {
     }
 
     /**
-     * 打开浏览器搜索指定内容
-     *
-     * @param search 需要搜索的内容
-     */
-    public static void startBrowserBySearch(Context context, String search) {
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_WEB_SEARCH);
-        intent.putExtra(SearchManager.QUERY, search);
-        context.startActivity(intent);
-    }
-
-    /**
-     * 打开指定页面
-     *
-     * @param url 链接
-     */
-    public static void startBrowser(Context context, String url) {
-        Uri uri = Uri.parse(url);
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-        context.startActivity(intent);
-    }
-
-    /**
      * 跳转到应用商店app详情界面
      *
      * @param appPackage    app包名
@@ -117,10 +94,67 @@ public class AppUtils {
     }
 
     /**
+     * 打开浏览器搜索指定内容
+     *
+     * @param search 需要搜索的内容
+     */
+    public static void startBrowserBySearch(Context context, String search) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_WEB_SEARCH);
+        intent.putExtra(SearchManager.QUERY, search);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 打开指定页面
+     *
+     * @param url 链接
+     */
+    public static void startBrowser(Context context, String url) {
+        Uri uri = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        context.startActivity(intent);
+    }
+
+    /**
      * 打开设置页面
      */
     public static void startSetting(Context context) {
         Intent intent = new Intent(android.provider.Settings.ACTION_SETTINGS);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 打电话
+     *
+     * @param phone 电话号码
+     */
+    public static void call(Context context, String phone) {
+        Uri uri = Uri.parse("tel:" + phone);
+        Intent intent = new Intent(Intent.ACTION_DIAL, uri);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 发短信
+     *
+     * @param phone 电话号码
+     * @param sms   短信内容
+     */
+    public static void sendSms(Context context, String phone, String sms) {
+        Uri uri = Uri.parse("smsto:" + phone);
+        Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
+        intent.putExtra("sms_body", sms);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 发邮件
+     * @param email 邮箱
+     */
+    public static void sendEmail(Context context, String email) {
+        Uri uri = Uri.parse("mailto:" + email);
+        Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
         context.startActivity(intent);
     }
 
