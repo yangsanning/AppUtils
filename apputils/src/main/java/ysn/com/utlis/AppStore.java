@@ -107,7 +107,7 @@ public enum AppStore {
     /**
      * 金立软件商店
      */
-    JIN_LI("\tcom.gionee.aora.market"),
+    JIN_LI("com.gionee.aora.market"),
 
     /**
      * 机锋应用市场
