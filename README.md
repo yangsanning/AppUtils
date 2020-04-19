@@ -1,5 +1,5 @@
 # AppUtils
-[![](https://jitpack.io/v/yangsanning/TableView.svg)](https://jitpack.io/#yangsanning/TableView)
+[![](https://jitpack.io/v/yangsanning/AppUtils.svg)](https://jitpack.io/#yangsanning/AppUtils)
 [![API](https://img.shields.io/badge/API-19%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=19)
 
 | 功能 | 对应方法 |
@@ -38,5 +38,5 @@ allprojects {
 在需要添加依赖的 Module 下添加以下信息，使用方式和普通的远程仓库一样。
 
 ```android
-implementation 'com.github.yangsanning:AppUtils:1.0.0'
+implementation 'com.github.yangsanning:AppUtils:1.1.0'
 ```
